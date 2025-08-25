@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Messaging Chat Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+    header {
+      background: #0070d2;
+      color: white;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+      text-align: center;
+    }
+    footer {
+      background: #f1f1f1;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🚀 My Web Portal with Salesforce
+  </header>
+
+  <main>
+    <p>Welcome! Use the chat widget below to connect with us.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 My Company
+  </footer>
+
+  <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DD4000000Ht4B',
+				'LiveChatMessagingChannel',
+				'https://ex1731392600076--sdodev.sandbox.my.site.com/ESWLiveChatMessagingChann1754468135044',
+				{
+					scrt2URL: 'https://ex1731392600076--sdodev.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://ex1731392600076--sdodev.sandbox.my.site.com/ESWLiveChatMessagingChann1754468135044/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+</body>
+</html>
